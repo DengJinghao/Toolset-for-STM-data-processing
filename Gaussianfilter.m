@@ -1,8 +1,10 @@
 %针对一维数组的高斯滤波, 两端的扩充矩阵元取值为数组的start与end值
-%Gaussianfilter(data, r, length)
+%Gaussianfilter(data, r, coarsening_length)
 %key parameters:
 %length: coarsening length in terms of pixel
-%r: integrating scale, r = 2*length, usually
+%r: integrating scale, r = 4*length, usually
+%   for r = 4*length, the templet contains 95.45% of the total area
+%   for r = 6*length, the templet contains 99.73% of the total area
 %data: experimental data for filtering process
 function y_filted = Gaussianfilter(data, r, coarsening_length)
 
